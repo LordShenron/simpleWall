@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Wallpaper Hub</string>
+    <string name="app_name">Simple Wallpaper</string>
 
-    <string name="nav_home">Home</string>
-    <string name="nav_favourites">Favourites</string>
-    <string name="nav_settings">Settings</string>
+    <string name="nav_home">Wallpapers</string>
+    <string name="nav_favourites">Your Favs</string>
+    <string name="nav_settings">Login</string>
     <string name="string_not_signed_in">Oops! You have to sign in first...</string>
     <string name="logout">Logout</string>
 

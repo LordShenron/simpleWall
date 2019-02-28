@@ -1,4 +1,4 @@
-package net.simplifiedcoding.wallpaperhub.models;
+package net.shenron.simpleWall.models;
 
 import com.google.firebase.database.Exclude;
 

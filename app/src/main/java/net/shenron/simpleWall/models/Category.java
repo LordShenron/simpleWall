@@ -1,4 +1,4 @@
-package net.simplifiedcoding.wallpaperhub.models;
+package net.shenron.simpleWall.models;
 
 /**
  * Created by Belal on 4/21/2018.

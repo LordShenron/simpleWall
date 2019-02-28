@@ -1,4 +1,4 @@
-package net.simplifiedcoding.wallpaperhub.adapters;
+package net.shenron.simpleWall.adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -29,9 +29,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import net.simplifiedcoding.wallpaperhub.BuildConfig;
-import net.simplifiedcoding.wallpaperhub.R;
-import net.simplifiedcoding.wallpaperhub.models.Wallpaper;
+import net.shenron.simpleWall.BuildConfig;
+import net.shenron.simpleWall.R;
+import net.shenron.simpleWall.models.Wallpaper;
 
 import java.io.File;
 import java.io.FileNotFoundException;

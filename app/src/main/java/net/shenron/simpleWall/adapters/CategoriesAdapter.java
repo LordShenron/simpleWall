@@ -1,4 +1,4 @@
-package net.simplifiedcoding.wallpaperhub.adapters;
+package net.shenron.simpleWall.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,15 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 
-import net.simplifiedcoding.wallpaperhub.R;
-import net.simplifiedcoding.wallpaperhub.activities.WallpapersActivity;
-import net.simplifiedcoding.wallpaperhub.models.Category;
+import net.shenron.simpleWall.R;
+import net.shenron.simpleWall.activities.WallpapersActivity;
+import net.shenron.simpleWall.models.Category;
 
 import java.util.List;
 

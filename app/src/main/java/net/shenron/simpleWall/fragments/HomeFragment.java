@@ -1,4 +1,4 @@
-package net.simplifiedcoding.wallpaperhub.fragments;
+package net.shenron.simpleWall.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,9 +16,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import net.simplifiedcoding.wallpaperhub.R;
-import net.simplifiedcoding.wallpaperhub.adapters.CategoriesAdapter;
-import net.simplifiedcoding.wallpaperhub.models.Category;
+import net.shenron.simpleWall.R;
+import net.shenron.simpleWall.adapters.CategoriesAdapter;
+import net.shenron.simpleWall.models.Category;
 
 import java.util.ArrayList;
 import java.util.List;

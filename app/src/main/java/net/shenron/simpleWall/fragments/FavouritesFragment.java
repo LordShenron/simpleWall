@@ -1,4 +1,4 @@
-package net.simplifiedcoding.wallpaperhub.fragments;
+package net.shenron.simpleWall.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,9 +17,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import net.simplifiedcoding.wallpaperhub.R;
-import net.simplifiedcoding.wallpaperhub.adapters.WallpapersAdapter;
-import net.simplifiedcoding.wallpaperhub.models.Wallpaper;
+import net.shenron.simpleWall.R;
+import net.shenron.simpleWall.adapters.WallpapersAdapter;
+import net.shenron.simpleWall.models.Wallpaper;
 
 import java.util.ArrayList;
 import java.util.List;

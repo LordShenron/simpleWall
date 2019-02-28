@@ -1,4 +1,4 @@
-package net.simplifiedcoding.wallpaperhub.fragments;
+package net.shenron.simpleWall.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,7 +26,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-import net.simplifiedcoding.wallpaperhub.R;
+import net.shenron.simpleWall.R;
 
 public class SettingsFragment extends Fragment {
 

@@ -1,4 +1,4 @@
-package net.simplifiedcoding.wallpaperhub.activities;
+package net.shenron.simpleWall.activities;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -9,10 +9,10 @@ import android.view.MenuItem;
 
 import com.google.android.gms.ads.MobileAds;
 
-import net.simplifiedcoding.wallpaperhub.R;
-import net.simplifiedcoding.wallpaperhub.fragments.FavouritesFragment;
-import net.simplifiedcoding.wallpaperhub.fragments.HomeFragment;
-import net.simplifiedcoding.wallpaperhub.fragments.SettingsFragment;
+import net.shenron.simpleWall.R;
+import net.shenron.simpleWall.fragments.FavouritesFragment;
+import net.shenron.simpleWall.fragments.HomeFragment;
+import net.shenron.simpleWall.fragments.SettingsFragment;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 

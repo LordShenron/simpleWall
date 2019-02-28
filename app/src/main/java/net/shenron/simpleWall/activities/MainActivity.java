@@ -1,11 +1,8 @@
-package net.simplifiedcoding.wallpaperhub.activities;
+package net.shenron.simpleWall.activities;
 
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import net.simplifiedcoding.wallpaperhub.R;
+import android.support.v7.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
