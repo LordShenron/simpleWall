@@ -10,9 +10,7 @@ import android.view.MenuItem;
 import com.google.android.gms.ads.MobileAds;
 
 import net.shenron.simpleWall.R;
-import net.shenron.simpleWall.fragments.FavouritesFragment;
 import net.shenron.simpleWall.fragments.HomeFragment;
-import net.shenron.simpleWall.fragments.SettingsFragment;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
