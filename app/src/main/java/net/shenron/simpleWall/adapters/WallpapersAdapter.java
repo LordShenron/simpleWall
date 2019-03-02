@@ -136,7 +136,7 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
                                   intent.setType("image/*");
                                   intent.putExtra(Intent.EXTRA_STREAM, getLocalBitmapUri(resource));
 
-                                  mCtx.startActivity(Intent.createChooser(intent, "Wallpapers Hub"));
+                                  mCtx.startActivity(Intent.createChooser(intent, "simpleWall"));
                               }
                           }
                     );
@@ -146,9 +146,9 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
             Uri bmpUri = null;
             try {
                 File file = new File(mCtx.getExternalFilesDir(Environment.DIRECTORY_PICTURES),
-                        "wallpaper_hub_" + System.currentTimeMillis() + ".png");
+                        "simple_wall_" + System.currentTimeMillis() + ".png");
                 FileOutputStream out = new FileOutputStream(file);
-                bmp.compress(Bitmap.CompressFormat.PNG, 90, out);
+                bmp.compress(Bitmap.CompressFormat.PNG, 100, out);
                 out.close();
                 bmpUri = FileProvider.getUriForFile(mCtx, BuildConfig.APPLICATION_ID + ".provider", file);
             } catch (FileNotFoundException e) {
@@ -160,7 +160,9 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
         }
 
 
-        private void downloadWallpaper(final Wallpaper wallpaper) {
+        private void downloadWallpaper(final Wallpaper wallpaper)
+        {
+
             ((Activity) mCtx).findViewById(R.id.progressbar).setVisibility(View.VISIBLE);
 
             Glide.with(mCtx)
@@ -172,12 +174,12 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
                                   ((Activity) mCtx).findViewById(R.id.progressbar).setVisibility(View.GONE);
 
                                   Intent intent = new Intent(Intent.ACTION_VIEW);
-
+                                  intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                                   Uri uri = saveWallpaperAndGetUri(resource, wallpaper.id);
 
                                   if (uri != null) {
                                       intent.setDataAndType(uri, "image/*");
-                                      mCtx.startActivity(Intent.createChooser(intent, "Wallpapers Hub"));
+                                      mCtx.startActivity(Intent.createChooser(intent, "simple_wall"));
                                   }
                               }
                           }
@@ -206,7 +208,7 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
                 return null;
             }
 
-            File folder = new File(Environment.getExternalStorageDirectory().toString() + "/wallpapers_hubs");
+            File folder = new File(Environment.getExternalStorageDirectory().toString() + "/simple_wall");
             folder.mkdirs();
 
             File file = new File(folder, id + ".jpg");
