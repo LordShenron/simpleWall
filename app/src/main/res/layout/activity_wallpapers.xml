@@ -12,6 +12,7 @@
         android:background="@color/colorPrimary">
 
         <android.support.v7.widget.Toolbar
+            android:background="@drawable/background_non_gradient"
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,6 +27,7 @@
         android:layout_height="match_parent">
 
         <android.support.v7.widget.RecyclerView
+            android:background="@drawable/background_non_gradient"
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

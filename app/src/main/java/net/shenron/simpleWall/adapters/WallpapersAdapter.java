@@ -93,11 +93,11 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
             textView = itemView.findViewById(R.id.text_view_title);
             imageView = itemView.findViewById(R.id.image_view);
 
-            checkBoxFav = itemView.findViewById(R.id.checkbox_favourite);
+
             buttonShare = itemView.findViewById(R.id.button_share);
             buttonDownload = itemView.findViewById(R.id.button_download);
 
-            checkBoxFav.setOnCheckedChangeListener(this);
+
             buttonShare.setOnClickListener(this);
             buttonDownload.setOnClickListener(this);
         }
