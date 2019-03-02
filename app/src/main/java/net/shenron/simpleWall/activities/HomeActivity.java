@@ -46,12 +46,6 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
             case R.id.nav_home:
                 fragment = new HomeFragment();
                 break;
-            case R.id.nav_fav:
-                fragment = new FavouritesFragment();
-                break;
-            case R.id.nav_set:
-                fragment = new SettingsFragment();
-                break;
             default:
                 fragment = new HomeFragment();
                 break;

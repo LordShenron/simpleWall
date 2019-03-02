@@ -3,20 +3,6 @@
 
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_love"
         android:title="@string/nav_home" />
-
-    <item
-        android:id="@+id/nav_fav"
-        android:icon="@drawable/ic_favorite"
-        android:title="@string/nav_favourites"
-        />
-
-
-    <item
-        android:id="@+id/nav_set"
-        android:icon="@drawable/ic_settings"
-        android:title="@string/nav_settings" />
-
-
 </menu>

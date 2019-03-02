@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">Simple Wallpaper</string>
 
-    <string name="nav_home">Wallpapers</string>
-    <string name="nav_favourites">Your Favs</string>
-    <string name="nav_settings">Login</string>
-    <string name="string_not_signed_in">Oops! You have to sign in first...</string>
+    <string name="nav_home">Simple Wallpaper App</string>
     <string name="logout">Logout</string>
 
 </resources>
