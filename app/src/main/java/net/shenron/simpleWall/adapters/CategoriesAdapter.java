@@ -10,9 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-
 import net.shenron.simpleWall.R;
 import net.shenron.simpleWall.activities.WallpapersActivity;
 import net.shenron.simpleWall.models.Category;
@@ -24,15 +21,9 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
     private Context mCtx;
     private List<Category> categoryList;
 
-    private InterstitialAd mInterstitialAd;
-
     public CategoriesAdapter(Context mCtx, List<Category> categoryList) {
         this.mCtx = mCtx;
         this.categoryList = categoryList;
-
-        mInterstitialAd = new InterstitialAd(mCtx);
-        mInterstitialAd.setAdUnitId("ca-app-pub-6677140660293215/9762844227");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
     }
 
     @Override
@@ -71,13 +62,6 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
 
         @Override
         public void onClick(View view) {
-
-            if (mInterstitialAd.isLoaded()) {
-                mInterstitialAd.show();
-            } else {
-                mInterstitialAd.loadAd(new AdRequest.Builder().build());
-            }
-
             int p = getAdapterPosition();
             Category c = categoryList.get(p);
 

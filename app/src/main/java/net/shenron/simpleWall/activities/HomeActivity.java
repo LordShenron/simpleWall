@@ -6,9 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-
-import com.google.android.gms.ads.MobileAds;
-
 import net.shenron.simpleWall.R;
 import net.shenron.simpleWall.fragments.HomeFragment;
 
@@ -20,9 +17,6 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        MobileAds.initialize(this,
-                "ca-app-pub-6677140660293215~1274103829");
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
