@@ -10,7 +10,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,7 +30,7 @@ public class WallpapersActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     WallpapersAdapter adapter;
 
-    DatabaseReference dbWallpapers, dbFavs;
+    DatabaseReference dbWallpapers;
     ProgressBar progressBar;
 
     @Override
@@ -58,48 +57,10 @@ public class WallpapersActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressbar);
         dbWallpapers = FirebaseDatabase.getInstance().getReference("images")
                 .child(category);
-
-
-        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-            dbFavs = FirebaseDatabase.getInstance().getReference("users")
-                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                    .child("favourites")
-                    .child(category);
-            fetchFavWallpapers(category);
-        } else {
-            fetchWallpapers(category);
-        }
-
-    }
-
-    private void fetchFavWallpapers(final String category) {
-        progressBar.setVisibility(View.VISIBLE);
-        dbFavs.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                progressBar.setVisibility(View.GONE);
-                if (dataSnapshot.exists()) {
-                    for (DataSnapshot wallpaperSnapshot : dataSnapshot.getChildren()) {
-
-                        String id = wallpaperSnapshot.getKey();
-                        String title = wallpaperSnapshot.child("title").getValue(String.class);
-                        String desc = wallpaperSnapshot.child("desc").getValue(String.class);
-                        String url = wallpaperSnapshot.child("url").getValue(String.class);
-
-                        Wallpaper w = new Wallpaper(id, title, desc, url, category);
-                        favList.add(w);
-                    }
-                }
                 fetchWallpapers(category);
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
 
-            }
-        });
     }
-
     private void fetchWallpapers(final String category) {
         progressBar.setVisibility(View.VISIBLE);
         dbWallpapers.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -116,10 +77,6 @@ public class WallpapersActivity extends AppCompatActivity {
 
                         Wallpaper w = new Wallpaper(id, title, desc, url, category);
 
-                        if (isFavourite(w)) {
-                            w.isFavourite = true;
-                        }
-
                         wallpaperList.add(w);
                     }
                     adapter.notifyDataSetChanged();
@@ -133,12 +90,4 @@ public class WallpapersActivity extends AppCompatActivity {
         });
     }
 
-    private boolean isFavourite(Wallpaper w) {
-        for (Wallpaper f : favList) {
-            if (f.id.equals(w.id)) {
-                return true;
-            }
-        }
-        return false;
     }
-}

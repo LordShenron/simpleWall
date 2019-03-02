@@ -15,7 +15,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -25,7 +24,6 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -66,10 +64,6 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
         Glide.with(mCtx)
                 .load(w.url)
                 .into(holder.imageView);
-
-        if (w.isFavourite) {
-            holder.checkBoxFav.setChecked(true);
-        }
     }
 
     @Override
@@ -82,8 +76,6 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
 
         TextView textView;
         ImageView imageView;
-
-        CheckBox checkBoxFav;
         ImageButton buttonShare, buttonDownload;
 
 
@@ -229,28 +221,8 @@ public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.Wa
 
         @Override
         public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-
-            if (FirebaseAuth.getInstance().getCurrentUser() == null) {
-                Toast.makeText(mCtx, "Please login first...", Toast.LENGTH_LONG).show();
-                compoundButton.setChecked(false);
-                return;
-            }
-
-
             int position = getAdapterPosition();
-            Wallpaper w = wallpaperList.get(position);
 
-
-            DatabaseReference dbFavs = FirebaseDatabase.getInstance().getReference("users")
-                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                    .child("favourites")
-                    .child(w.category);
-
-            if (b) {
-                dbFavs.child(w.id).setValue(w);
-            } else {
-                dbFavs.child(w.id).setValue(null);
-            }
         }
     }
 }
