@@ -1,27 +1,35 @@
 {
   "project_info": {
-    "project_number": "1093675965929",
-    "firebase_url": "https://mywallpaperapp-4d06e.firebaseio.com",
-    "project_id": "mywallpaperapp-4d06e",
-    "storage_bucket": "mywallpaperapp-4d06e.appspot.com"
+    "project_number": "125710149741",
+    "firebase_url": "https://simplewall-a7ca1.firebaseio.com",
+    "project_id": "simplewall-a7ca1",
+    "storage_bucket": "simplewall-a7ca1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1093675965929:android:b4cb09feaf6c0e6b",
+        "mobilesdk_app_id": "1:125710149741:android:b4cb09feaf6c0e6b",
         "android_client_info": {
           "package_name": "net.simplifiedcoding.wallpaperhub"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1093675965929-ho3c3u8i7dt0mk7mflis2e835tb072p6.apps.googleusercontent.com",
+          "client_id": "125710149741-l7iou0fiudql7c5nosjg2kdhhqg9ce29.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.simplifiedcoding.wallpaperhub",
+            "certificate_hash": "5bcda6bef7fc18763f7d9b3b68e5c0cb86a5c8a4"
+          }
+        },
+        {
+          "client_id": "125710149741-aifbp3b1in8hkgc1661ccv8vb981008n.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyARB7fVNPjO_A4cowwykBDaZSu3lcfxwSk"
+          "current_key": "AIzaSyC4aVs6Jgt2cEENfwETS9uxQ_JEdvR7KJ4"
         }
       ],
       "services": {
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125710149741-aifbp3b1in8hkgc1661ccv8vb981008n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

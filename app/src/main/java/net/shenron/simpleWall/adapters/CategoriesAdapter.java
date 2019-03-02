@@ -19,10 +19,6 @@ import net.shenron.simpleWall.models.Category;
 
 import java.util.List;
 
-/**
- * Created by Belal on 4/21/2018.
- */
-
 public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.CategoryViewHolder> {
 
     private Context mCtx;
