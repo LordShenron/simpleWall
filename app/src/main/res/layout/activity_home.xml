@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|enterAlways"
             app:title="@string/app_name"
-            app:titleTextColor="#000000" />
+            app:titleTextColor="#FFF" />
 
     </android.support.design.widget.AppBarLayout>
 
@@ -30,9 +30,9 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_gravity="bottom"
-        app:itemIconTint="#000000"
-        app:itemTextColor="#000000"
-        android:background="@color/colorPrimary"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#FFF"
+        android:background="@drawable/background_non_gradient"
         app:menu="@menu/nav_menu" />
 
 </android.support.design.widget.CoordinatorLayout>

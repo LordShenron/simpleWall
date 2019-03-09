@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:125710149741:android:b4cb09feaf6c0e6b",
         "android_client_info": {
-          "package_name": "net.simplifiedcoding.wallpaperhub"
+          "package_name": "net.shenron.simpleWall"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "125710149741-l7iou0fiudql7c5nosjg2kdhhqg9ce29.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "net.simplifiedcoding.wallpaperhub",
+            "package_name": "net.shenron.simpleWall",
             "certificate_hash": "5bcda6bef7fc18763f7d9b3b68e5c0cb86a5c8a4"
           }
         },

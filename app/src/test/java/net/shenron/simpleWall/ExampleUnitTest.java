@@ -1,4 +1,4 @@
-package net.simplifiedcoding.wallpaperhub;
+package net.shenron.simpleWall;
 
 import org.junit.Test;
 
