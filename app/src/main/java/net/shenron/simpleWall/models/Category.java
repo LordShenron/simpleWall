@@ -1,9 +1,5 @@
 package net.shenron.simpleWall.models;
 
-/**
- * Created by Belal on 4/21/2018.
- */
-
 public class Category {
     public String name, desc, thumb;
 

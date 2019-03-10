@@ -37,10 +37,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * Created by Belal on 4/21/2018.
- */
-
 public class WallpapersAdapter extends RecyclerView.Adapter<WallpapersAdapter.WallpaperViewHolder> {
 
     private Context mCtx;

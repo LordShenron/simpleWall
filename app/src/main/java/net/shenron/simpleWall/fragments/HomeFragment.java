@@ -23,10 +23,6 @@ import net.shenron.simpleWall.models.Category;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Belal on 4/20/2018.
- */
-
 public class HomeFragment extends Fragment {
 
     private List<Category> categoryList;
